@@ -1,0 +1,24 @@
+<section id="kardex" aria-labelledby="k-titulo">
+ <h2 id="k-titulo">Kardex de materiales ficticios</h2>
+ <p>Las existencias físicas son independientes del presupuesto del pedido.</p>
+ <form id="k-material-form">
+  <label class="etiqueta-kardex" for="k-nombre">Nombre del material</label>
+  <input id="k-nombre" maxlength="60" required>
+  <button>Crear material</button>
+ </form>
+ <label for="k-buscar">Buscar por nombre o código</label><input id="k-buscar">
+ <label for="k-material">Material seleccionado</label><select id="k-material"></select>
+ <p>Existencia: <strong id="k-saldo">0</strong></p>
+ <button id="k-renombrar" type="button">Cambiar nombre</button>
+ <button id="k-retirar" type="button">Eliminar sin movimientos o inactivar</button>
+ <form id="k-mov-form">
+  <label for="k-tipo">Movimiento</label>
+  <select id="k-tipo"><option>ENTRADA</option><option>SALIDA</option></select>
+  <label for="k-cantidad">Cantidad entera positiva</label><input id="k-cantidad" type="number" min="1" step="1" required>
+  <button>Registrar movimiento</button>
+ </form>
+ <button id="k-exportar" type="button">Exportar CSV</button>
+ <p id="k-mensaje" role="status" aria-live="polite"></p>
+ <div class="tabla-scroll"><table><thead><tr><th>Fecha</th><th>Material</th><th>Tipo</th><th>Cantidad</th></tr></thead><tbody id="k-filas"></tbody></table></div>
+ <p>Datos guardados sólo en este navegador y origen. CSV es una copia, no sincronización con Excel.</p>
+</section>

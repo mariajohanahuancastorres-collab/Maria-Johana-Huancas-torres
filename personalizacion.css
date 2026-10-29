@@ -1,0 +1,8 @@
+/* Incorporar a styles.css. Mantener reglas previas. */
+:root { --color-personal: rgb(30,64,175); }
+/* Alternativas: verde rgb(22,101,52); violeta rgb(107,33,168). */
+.etiqueta-conversion, .etiqueta-kardex { font-size: 1.1rem; font-weight: 700; }
+#conv-form button, #kardex button { background: var(--color-personal); color: white; }
+#kardex table { width: 100%; border-collapse: collapse; }
+#kardex th, #kardex td { padding: .45rem; border-bottom: 1px solid #cbd5e1; text-align: left; }
+#kardex .tabla-scroll { overflow-x: auto; }
